@@ -82,11 +82,10 @@ namespace Arrays
 			//	Console.WriteLine();
 			//} 
 			#endregion
-			Console.Write("Enter rows num: ");
-			int rows =Convert.ToInt32(Console.ReadLine());
-			Console.Write("Enter cols num: ");
-			int cols =Convert.ToInt32(Console.ReadLine());
-
+			/*
+			Console.Write("Enter rows num: ");int rows =Convert.ToInt32(Console.ReadLine());
+			Console.Write("Enter cols num: ");int cols =Convert.ToInt32(Console.ReadLine());
+			*/
 			int[][] arr = new int[][]
 				{
 					new int[]{3,5,8,13 },
@@ -100,14 +99,114 @@ namespace Arrays
 			//	arr[i] = new int[cols];
 			//}
 			FillRand(arr);
-			for (int i = 0; i < arr.Length; i++)
+			Print(arr);
+			Console.WriteLine($"Sum: {Sum(arr)}");
+			Console.WriteLine($"Avg: {Avg(arr)}");
+			Console.WriteLine($"Min: {Min(arr)}");
+			Console.WriteLine($"Max: {Max(arr)}");
+			Sort(arr);
+			Print(arr);
+
+
+		}
+		static void Print(int[][] arr)
+		{
+			/*for (int i = 0; i < arr.Length; i++)
 			{
 				for (int j = 0; j < arr[i].Length; j++)
 				{
 					Console.Write(arr[i][j] + "\t");
 				}
 				Console.WriteLine();
+			}*/
+			foreach(int[] i in arr)
+			{
+				//Console.Write(i + "\t");
+				foreach(int j in i)
+				{
+					Console.Write(j + "\t");
+				}
+			Console.WriteLine();
 			}
+			Console.WriteLine();
+		}
+		static int Sum(int[][] arr)
+		{
+			int temp = 0;
+			foreach (int[] i in arr)
+			{
+				foreach (int j in i)
+				{
+					temp += j;
+				}
+			}
+			return temp;
+		}
+		static double Avg(int[][] arr)
+		{
+			double temp = 0;
+			double it = 0;
+			foreach (int[] i in arr)
+			{
+				foreach (int j in i)
+				{
+					temp += j;
+					it++;
+				}
+			}
+			 return temp/it;
+		}
+		static int Min(int[][] arr)
+		{
+			int temp=arr[0][0];
+			foreach (int[] i in arr)
+			{
+				foreach (int j in i)
+				{
+					if (temp > j) temp = j;
+				}
+			}
+			return temp;
+		}
+		static int Max(int[][] arr)
+		{
+			int temp = arr[0][0];
+			foreach (int[] i in arr)
+			{
+				foreach (int j in i)
+				{
+					if (temp < j) temp = j;
+				}
+			}
+			return temp;
+		}
+		static void Sort(int[][] arr)
+		{
+			for(int i = 0; i < arr.Length; i++)
+			{
+				for (int j = 0; j < arr[i].Length; j++)
+				{
+					for (int k = i; k < arr.Length; k++)
+					{
+						for (int l= k==i?j+1:0 ; l < arr[k].Length; l++)
+						{
+							if (arr[k][l] < arr[i][j])
+							{
+								/*int buf = arr[i][j];
+								arr[i][j] = arr[k][l];
+								arr[k][l] = buf;*/
+								Exchange(ref arr[i][j],ref arr[k][l]);
+							}
+						}
+					}
+				}
+			}
+		}
+		static void Exchange(ref int a,ref int b)
+		{
+			int buf = a;
+			a = b;
+			b = buf;
 		}
 	}
 }
