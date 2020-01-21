@@ -109,5 +109,76 @@ namespace Fraction
 
 			return new Fraction(left.Numerator*right.Numerator,left.Denominator*right.Denominator).ToProper();
 		}
+		public static Fraction operator/(Fraction left,Fraction right)
+		{
+			left.ToImProper(); right.ToImProper();
+			return new Fraction(left.Numerator * right.Denominator, left.Denominator * right.Numerator).ToProper();
+		}
+		public static Fraction operator+(Fraction left, Fraction right)
+		{
+			left.ToImProper(); right.ToImProper();
+			return new Fraction((left.Numerator * right.Denominator) + (right.Numerator * left.Denominator), left.Denominator * right.Denominator).ToProper();
+		}
+		public static Fraction operator-(Fraction left, Fraction right)
+		{
+			left.ToImProper(); right.ToImProper();
+			return new Fraction((left.Numerator * right.Denominator) - (right.Numerator * left.Denominator), left.Denominator * right.Denominator).ToProper();
+		}
+		public static Fraction operator--(Fraction here)
+		{
+			here.ToImProper();
+			return new Fraction(here.Numerator-here.Denominator,here.Denominator).ToProper();
+		}
+		public static Fraction operator ++(Fraction here)
+		{
+			here.ToImProper();
+			return new Fraction(here.Numerator + here.Denominator, here.Denominator).ToProper();
+		}
+		public static bool operator>(Fraction left, Fraction right)
+		{
+			left.ToImProper(); right.ToImProper();
+			return ((left.Numerator * right.Denominator) > (right.Numerator * left.Denominator));
+		}
+		public static bool operator <(Fraction left, Fraction right)
+		{
+			left.ToImProper(); right.ToImProper();
+			return ((left.Numerator * right.Denominator) < (right.Numerator * left.Denominator));
+		}
+		public static bool operator ==(Fraction left, Fraction right)
+		{
+			left.ToImProper(); right.ToImProper();
+			return ((left.Numerator * right.Denominator) == (right.Numerator * left.Denominator));
+		}
+		public static bool operator !=(Fraction left, Fraction right)
+		{
+			left.ToImProper(); right.ToImProper();
+			return ((left.Numerator * right.Denominator) != (right.Numerator * left.Denominator));
+		}
+		public static bool operator >=(Fraction left, Fraction right)
+		{
+			left.ToImProper(); right.ToImProper();
+			return ((left.Numerator * right.Denominator) >= (right.Numerator * left.Denominator));
+		}
+		public static bool operator <=(Fraction left, Fraction right)
+		{
+			left.ToImProper(); right.ToImProper();
+			return ((left.Numerator * right.Denominator) <= (right.Numerator * left.Denominator));
+		}
+		public static implicit operator int(Fraction obj)
+		{
+			obj.ToProper();
+			return obj.Integer;
+		}
+		public static implicit operator double(Fraction obj)
+		{
+			obj.ToProper();
+
+			return ((double)obj.Integer+((double)obj.Numerator/(double)obj.Denominator));
+		}
+		public static bool operator true(Fraction obj)=> obj.Integer!=0 || obj.Numerator!=0;
+		public static bool operator false(Fraction obj) => obj.Integer == 0;
+		public static bool operator true(int obj) => obj != 0;
+		public static bool operator false(int obj) => obj == 0;
+
 	}
 }
