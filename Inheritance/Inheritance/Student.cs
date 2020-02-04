@@ -18,8 +18,17 @@ namespace Inheritance
 		}
 		public string Group
 		{
+
 			get => group;
-			set => group = value;
+			set
+			{
+				if (System.Text.RegularExpressions.Regex.IsMatch(value, "[^\\w ]*[!_]", System.Text.RegularExpressions.RegexOptions.IgnoreCase))
+				{
+					throw new Exception("группа не валидна");
+				}
+				group = value;
+			}
+
 		}
 		public uint Cource
 		{

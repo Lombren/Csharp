@@ -20,13 +20,13 @@ namespace BigNum
 			
 
 			
-			BigInteger f = 1;
-			for(ulong i = 1; i <= n; i++)
-			{
+			       BigInteger f = 1;
+			    for(ulong i = 1; i <= n; i++)
+			    {
 				f *= i;
 				//Console.WriteLine($"{i}!={f}");
-			}
-			Console.WriteLine($"{n}!={f}");
+			    }
+			    Console.WriteLine($"{n}!={f}");
 			}
 			catch
 			{
