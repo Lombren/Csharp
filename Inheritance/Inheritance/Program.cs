@@ -29,7 +29,7 @@ namespace Inheritance
                 Teacher Three = new Teacher("Antonio", "Fruit", 50, 1000, "C#");
                 Console.WriteLine(Three);
                 Console.WriteLine("==========================================");
-                Graduate Four = new Graduate("Vasa", "Kust", 23, 80, "ST PV34v", 4, "Массовое подвальное производство метамфетамина, используя рабский детский труд.");
+                Graduate Four = new Graduate("Vasa", "Kust", 23, 80, "STPV34v", 4, "Массовое подвальное производство метамфетамина, используя рабский детский труд.");
 
                 Console.WriteLine(Four);
 

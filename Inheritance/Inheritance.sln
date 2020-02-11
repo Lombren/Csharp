@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Inheritance\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometry", "Geometry\Geometry.csproj", "{7B2C69A0-B2D7-44FB-A279-7B4B4BACA54A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegExp", "RegExp\RegExp.csproj", "{BA707353-8735-4107-BC0B-6804ED11905E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +23,15 @@ Global
 		{7B2C69A0-B2D7-44FB-A279-7B4B4BACA54A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B2C69A0-B2D7-44FB-A279-7B4B4BACA54A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B2C69A0-B2D7-44FB-A279-7B4B4BACA54A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA707353-8735-4107-BC0B-6804ED11905E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA707353-8735-4107-BC0B-6804ED11905E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA707353-8735-4107-BC0B-6804ED11905E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA707353-8735-4107-BC0B-6804ED11905E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42B3513A-9A5B-40E7-93D6-BF6A79DBD844}
 	EndGlobalSection
 EndGlobal

@@ -22,9 +22,11 @@ namespace Inheritance
 			get => group;
 			set
 			{
-				if (System.Text.RegularExpressions.Regex.IsMatch(value, "[^\\w ]*[!_]", System.Text.RegularExpressions.RegexOptions.IgnoreCase))
+				if (System.Text.RegularExpressions.Regex.IsMatch(value, "[\\W] ", System.Text.RegularExpressions.RegexOptions.IgnoreCase))
 				{
-					throw new Exception("группа не валидна");
+					
+						throw new Exception("группа не валидна");
+					
 				}
 				group = value;
 			}
