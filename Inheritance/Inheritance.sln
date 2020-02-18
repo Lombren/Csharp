@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometry", "Geometry\Geomet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegExp", "RegExp\RegExp.csproj", "{BA707353-8735-4107-BC0B-6804ED11905E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{6AB8305F-1BF4-4353-8A2B-893C5B2D5D6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BA707353-8735-4107-BC0B-6804ED11905E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA707353-8735-4107-BC0B-6804ED11905E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA707353-8735-4107-BC0B-6804ED11905E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AB8305F-1BF4-4353-8A2B-893C5B2D5D6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AB8305F-1BF4-4353-8A2B-893C5B2D5D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AB8305F-1BF4-4353-8A2B-893C5B2D5D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AB8305F-1BF4-4353-8A2B-893C5B2D5D6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
