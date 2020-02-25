@@ -20,7 +20,7 @@ namespace Car
 			get => fuel;
 			set
 			{
-				fuel += value;
+				fuel = value;
 				if (fuel < 0) fuel = 0;
 				if (fuel > Volum) fuel = Volum;
 			}
@@ -31,7 +31,7 @@ namespace Car
 			Fuel = fuel;
 
 		}
-		void Fill(double fuel)
+		public void Fill(double fuel)
 		{
 			Fuel += fuel;
 		}
