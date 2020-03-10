@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1D21A625-538F-4D1F-9EB2-5EE0BB544FFB}</ProjectGuid>
+    <ProjectGuid>{523B4529-1CB6-4641-95E9-EE00C6606BC7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Car</RootNamespace>
-    <AssemblyName>Car</AssemblyName>
+    <RootNamespace>Threads</RootNamespace>
+    <AssemblyName>Threads</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,12 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Car.cs" />
-    <Compile Include="Control.cs" />
-    <Compile Include="Engine.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tank.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -10,6 +10,7 @@ namespace Car
 	{
 		uint power;
 		double consumption;
+		//double consumprionPerSecond;
 		//bool started;
 		public uint Power
 		{
@@ -24,17 +25,19 @@ namespace Car
 			get => consumption;
 			private set=>consumption=value;
 		}
+		public double ConsumptionPerSecond { get; set; }
 		public bool Started { get; set; }
 
 		public Engine(uint power)
 		{
 			Power = power;
 			consumption = 0.0002 * (Power / 15);
+			ConsumptionPerSecond = Consumption / 100;
 			Started = false;
 		}
 		public override string ToString()
 		{
-			return $"Power: {Power} HP, Consumption: {Consumption*3600} litr per 100km, Engine status: {(Started? "started":"stopped")}";
+			return $"Power: {Power} HP, Consumption: {Consumption*3600} litr per 100km,ConsumptionPerSecond: {ConsumptionPerSecond} l/s, Engine status: {(Started? "started":"stopped")}";
 		}
 
 
